@@ -1,182 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colégio Estadual Professor Júlio Szymanski</title>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colégio Estadual Professor Júlio Szymanski</title>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    html, body {
-      height: 100%;
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 90%;
-      max-width: 600px;
-      gap: 30px;
-      padding: 20px 0;
-    }
+/* Container geral */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+  gap: 30px;
+}
 
-    .post-it {
-      background-color: #ffffff;
-      padding: 25px 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      text-align: center;
-      width: 100%;
-      color: #000000;
-    }
+/* Post-it moderno */
+.post-it {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  transition: transform 0.3s;
+}
 
-    .school-type {
-      display: inline-block;
-      background-color: #000000;
-      color: #ffffff;
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
+.post-it:hover {
+  transform: translateY(-5px);
+}
 
-    .school-name {
-      margin: 10px 0;
-      font-size: 24px;
-      font-weight: bold;
-      color: #000000;
-    }
+/* Rede estadual */
+.school-type {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 6px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
 
-    .school-address {
-      font-size: 16px;
-      margin-bottom: 20px;
-      color: #000000;
-    }
+/* Nome da escola */
+.school-name {
+  margin: 12px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111111;
+}
 
-    .school-shifts {
-      margin-bottom: 20px;
-    }
+/* Endereço */
+.school-address {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333333;
+  line-height: 1.4;
+}
 
-    .shift {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 25px;
-      margin: 0 5px;
-      font-size: 14px;
-      font-weight: bold;
-      background-color: #000000;
-      color: #ffffff;
-    }
+/* Turnos */
+.school-shifts {
+  margin-bottom: 25px;
+}
 
-    .school-courses h2 {
-      margin-bottom: 10px;
-      font-size: 18px;
-      color: #000000;
-    }
+.shift {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 25px;
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #111111;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
 
-    .school-courses ul {
-      list-style-type: none;
-      padding: 0;
-    }
+.shift:hover {
+  background-color: #333333;
+}
 
-    .school-courses li {
-      margin-bottom: 5px;
-      font-size: 16px;
-      color: #000000;
-    }
+/* Cursos */
+.school-courses h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111111;
+}
 
-    .contacts {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 15px;
-    }
+.school-courses ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-    .contact-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      color: #000000;
-      border: 2px solid #000000;
-      font-size: 20px;
-      transition: transform 0.3s, background-color 0.3s, color 0.3s;
-      background-color: #ffffff;
-    }
+.school-courses li {
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #222222;
+}
 
-    .contact-icon:hover {
-      transform: scale(1.2);
-      background-color: #000000;
-      color: #ffffff;
-    }
+/* Contatos */
+.contacts {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
 
-    .map {
-      width: 100%;
-      max-width: 600px;
-      height: 300px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: #111111;
+  border: 2px solid #111111;
+  font-size: 20px;
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
 
-    .map iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-  </style>
+.contact-icon:hover {
+  background-color: #111111;
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* Mapa retangular */
+.map {
+  width: 100%;
+  max-width: 650px;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.map:hover {
+  transform: translateY(-5px);
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .school-name { font-size: 22px; }
+  .school-courses h2 { font-size: 16px; }
+  .school-courses li { font-size: 14px; }
+  .map { height: 250px; }
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="post-it">
-      <div class="school-type">Rede Estadual</div>
-      <h1 class="school-name">Colégio Estadual Professor Júlio Szymanski</h1>
-      <p class="school-address">Rua São Vicente de Paulo, 76 – Centro, Araucária – PR, CEP: 83702-050</p>
+<div class="container">
+  <div class="post-it">
+    <div class="school-type">Rede Estadual</div>
+    <h1 class="school-name">Colégio Estadual Professor Júlio Szymanski</h1>
+    <p class="school-address">Rua São Vicente de Paulo, 76 – Centro, Araucária – PR, CEP: 83702-050</p>
 
-      <div class="school-shifts">
-        <span class="shift morning">Manhã</span>
-        <span class="shift afternoon">Tarde</span>
-        <span class="shift full">Integral</span>
-      </div>
-
-      <div class="school-courses">
-        <h2>Cursos ofertados:</h2>
-        <ul>
-          <li>Ensino Médio Normal</li>
-          <li>Formação de Docentes</li>
-          <li>Análise e Desenvolvimento de Sistemas</li>
-          <li>Administração</li>
-        </ul>
-      </div>
-
-      <div class="contacts">
-        <a href="#" class="contact-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="contact-icon facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="contact-icon instagram"><i class="fab fa-instagram"></i></a>
-      </div>
+    <div class="school-shifts">
+      <span class="shift morning">Manhã</span>
+      <span class="shift afternoon">Tarde</span>
+      <span class="shift full">Integral</span>
     </div>
 
-    <div class="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d365.788345!2d-49.4017277!3d-25.5893685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dd03a2bc99036b%3A0xd2843373e3d3891d!2sJulio%20Szymanski!5e0!3m2!1spt-BR!2sbr!4v1718658532978!5m2!1spt-BR!2sbr"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <div class="school-courses">
+      <h2>Cursos ofertados:</h2>
+      <ul>
+        <li>Ensino Médio Normal</li>
+        <li>Formação de Docentes</li>
+        <li>Análise e Desenvolvimento de Sistemas</li>
+        <li>Administração</li>
+      </ul>
+    </div>
+
+    <div class="contacts">
+      <a href="#" class="contact-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" class="contact-icon facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="contact-icon instagram"><i class="fab fa-instagram"></i></a>
     </div>
   </div>
+
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d365.788345!2d-49.4017277!3d-25.5893685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dd03a2bc99036b%3A0xd2843373e3d3891d!2sJulio%20Szymanski!5e0!3m2!1spt-BR!2sbr!4v1718658532978!5m2!1spt-BR!2sbr"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
 </body>
 </html>
