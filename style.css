@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   height: 100%;
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
@@ -20,16 +20,17 @@ body, html {
   flex-direction: column;
   align-items: center;
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
   gap: 30px;
+  padding: 20px 0;
 }
 
-/* Post-it estilo amarelo centralizado */
+/* Post-it estilo clean */
 .post-it {
-  background-color: #fff9a3; /* amarelo claro */
-  padding: 25px;
+  background-color: #fff9a3; /* amarelo claro estilo post-it */
+  padding: 25px 20px;
   border-radius: 12px;
-  box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   text-align: center;
   width: 100%;
 }
@@ -49,8 +50,9 @@ body, html {
 /* Nome da escola */
 .school-name {
   margin: 10px 0;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
+  color: #222;
 }
 
 /* Endereço */
@@ -67,7 +69,7 @@ body, html {
 
 .shift {
   display: inline-block;
-  padding: 7px 15px;
+  padding: 6px 14px;
   border-radius: 25px;
   margin: 0 5px;
   font-size: 14px;
@@ -83,7 +85,7 @@ body, html {
 .school-courses h2 {
   margin-bottom: 10px;
   font-size: 18px;
-  color: #333;
+  color: #222;
 }
 
 .school-courses ul {
@@ -102,18 +104,18 @@ body, html {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .contact-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   color: #fff;
-  font-size: 22px;
+  font-size: 20px;
   transition: transform 0.3s;
 }
 
@@ -125,13 +127,14 @@ body, html {
 .contact-icon.facebook { background-color: #3b5998; }
 .contact-icon.instagram { background-color: #E1306C; }
 
-/* Mapa quadrado e centralizado */
+/* Mapa retangular e centralizado */
 .map {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .map iframe {
