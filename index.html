@@ -4,8 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colégio Estadual Professor Júlio Szymanski</title>
-  <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      max-width: 600px;
+      gap: 30px;
+      padding: 20px 0;
+    }
+
+    .post-it {
+      background-color: #ffffff;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 100%;
+      color: #000000;
+    }
+
+    .school-type {
+      display: inline-block;
+      background-color: #000000;
+      color: #ffffff;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .school-name {
+      margin: 10px 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .school-address {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .school-shifts {
+      margin-bottom: 20px;
+    }
+
+    .shift {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 25px;
+      margin: 0 5px;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    .school-courses h2 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #000000;
+    }
+
+    .school-courses ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .school-courses li {
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: #000000;
+    }
+
+    .contacts {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .contact-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: #000000;
+      border: 2px solid #000000;
+      font-size: 20px;
+      transition: transform 0.3s, background-color 0.3s, color 0.3s;
+      background-color: #ffffff;
+    }
+
+    .contact-icon:hover {
+      transform: scale(1.2);
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    .map {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -31,15 +165,9 @@
       </div>
 
       <div class="contacts">
-        <a href="https://wa.me/5511999999999" target="_blank" class="contact-icon whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://facebook.com" target="_blank" class="contact-icon facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://instagram.com" target="_blank" class="contact-icon instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
+        <a href="#" class="contact-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="contact-icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="contact-icon instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
 
