@@ -10,10 +10,33 @@ body {
   margin: 30px auto;
   padding: 20px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
+/* Card principal */
+.school-card {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+/* Foto da escola */
+.school-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+}
+
+/* Detalhes da escola */
+.school-details {
+  flex: 1;
+}
+
+/* Rede estadual */
 .school-type {
   display: inline-block;
   background-color: #0056b3;
@@ -25,20 +48,23 @@ body {
   font-size: 14px;
 }
 
+/* Nome da escola */
 .school-name {
-  margin: 5px 0 15px 0;
-  font-size: 28px;
+  margin: 5px 0 10px 0;
+  font-size: 26px;
   font-weight: bold;
 }
 
+/* Endereço */
 .school-address {
   font-size: 16px;
   margin-bottom: 20px;
   color: #666;
 }
 
+/* Turnos */
 .school-shifts {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .shift {
@@ -55,9 +81,10 @@ body {
 .shift.afternoon { background-color: #FFA500; } /* Laranja */
 .shift.full { background-color: #32CD32; } /* Verde Lime */
 
+/* Cursos */
 .school-courses h2 {
-  margin-bottom: 15px;
-  font-size: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
   color: #333;
 }
 
@@ -71,19 +98,19 @@ body {
   color: #555;
 }
 
+/* Contatos */
 .contacts {
   display: flex;
   gap: 15px;
-  margin-top: 25px;
-  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .contact-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   color: #fff;
   font-size: 22px;
@@ -98,6 +125,7 @@ body {
 .contact-icon.facebook { background-color: #3b5998; }
 .contact-icon.instagram { background-color: #E1306C; }
 
+/* Mapa */
 .map iframe {
   width: 100%;
   border-radius: 12px;
